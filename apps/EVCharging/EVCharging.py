@@ -3,7 +3,6 @@
 # Author : Gerard Mamelle (2024)
 # Version : 1.0.0
 # Program under MIT licence
-#
 ############################################################################################################
 import hassapi as hass
 
@@ -67,10 +66,10 @@ class EVCharging(hass.Hass):
     def change_command_ev_charging(self, entity, attribute, old_state, new_state, kwargs):
         if new_state == 'on': 
             self.turn_on(self.args['command_ev_charging'])
-            self.log("Demarrage manuel charge")
+            self.log("Demarrage charge")
         else:
             self.turn_off(self.args['command_ev_charging'])
-            self.log("Arret manuel charge")
+            self.log("Arret charge")
     
     # Regulation de la charge
     def check_ev_charging(self):
